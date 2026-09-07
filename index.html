@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#087443">
+<title>FolHut BD | তাজা আম ও খাঁটি খেজুরের গুড়</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',sans-serif;color:#17352a;background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}
+button,input,textarea,select{font:inherit}
+.container{width:min(1180px,92%);margin:auto}
+.top{background:#063c2a;color:#fff;text-align:center;padding:7px;font-size:14px}
+header{position:sticky;top:0;z-index:100;background:#fff;box-shadow:0 3px 18px #0000000d}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:700}
+.logo-icon{width:46px;height:46px;border-radius:50%;background:#087443;color:white;display:grid;place-items:center;font-size:25px}
+.logo b{font-size:24px;color:#087443}.logo b span{color:#a65a1c}
+.logo small{display:block;color:#728079;font-size:10px}
+.navlinks{display:flex;gap:24px;font-weight:600}
+.navlinks a:hover{color:#087443}
+.actions{display:flex;gap:8px;align-items:center}
+.btn{border:0;border-radius:11px;padding:11px 18px;cursor:pointer;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:7px}
+.green{background:#087443;color:#fff}.green:hover{background:#065e37}
+.cart{position:relative;border:0;background:#eef7ef;color:#087443;border-radius:50%;width:43px;height:43px;cursor:pointer}
+.count{position:absolute;right:-3px;top:-4px;background:#e32626;color:#fff;border-radius:50%;min-width:20px;height:20px;font-size:11px;display:grid;place-items:center}
+.menu{display:none}
+.hero{min-height:570px;display:flex;align-items:center;color:#fff;background:linear-gradient(90deg,#02371fd9,#02371f66,#00000010),url('https://images.unsplash.com/photo-1605027990121-cbae9e0642df?auto=format&fit=crop&w=1800&q=85') center/cover}
+.hero-content{padding:70px 0;max-width:700px}
+.eyebrow{display:inline-block;background:#ffffff1c;border:1px solid #ffffff55;border-radius:30px;padding:6px 13px;margin-bottom:15px}
+.hero h1{font-size:clamp(40px,6vw,70px);line-height:1.1}
+.hero h1 span{color:#ffd13d}
+.hero p{font-size:19px;margin:18px 0 26px;max-width:620px;color:#edf7f0}
+.hero-buttons{display:flex;gap:11px;flex-wrap:wrap}
+.outline{background:transparent;color:#fff;border:1px solid #fff}
+.features{box-shadow:0 6px 25px #0000000b}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);padding:20px 0;gap:10px}
+.feature{display:flex;align-items:center;gap:10px;padding:5px;border-right:1px solid #e6eee8}
+.feature:last-child{border:0}.fi{font-size:26px}.feature small{display:block;color:#718078;font-size:12px}
+section{padding:70px 0}.head{text-align:center;margin-bottom:34px}.head .tag{color:#087443;font-weight:700}.head h2{font-size:36px;margin:4px 0}.head p{color:#6c7b74}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.product{border:1px solid #e7eee8;border-radius:19px;overflow:hidden;box-shadow:0 10px 30px #00461c12;background:#fff;transition:.2s}
+.product:hover{transform:translateY(-5px)}
+.pic{height:215px;position:relative}.pic img{width:100%;height:100%;object-fit:cover}
+.badge{position:absolute;top:12px;left:12px;background:#f5b51b;padding:4px 9px;border-radius:20px;font-size:12px;font-weight:700}
+.pb{padding:15px}.pb h3{font-size:20px}.pb p{font-size:13px;color:#6c7b74;min-height:40px}
+.price{color:#087443;font-size:22px;font-weight:700;margin:7px 0}
+.add{width:100%}
+.mango{background:#f5faef}.jaggery{background:#fff7e9}
+.about{background:#fffaf0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.about-img{height:420px;border-radius:25px;overflow:hidden}.about-img img{height:100%;object-fit:cover}
+.about h2{font-size:38px;margin:5px 0 13px}.about p{color:#6c7b74}.checks{margin-top:18px;display:grid;gap:9px;font-weight:600}.checks span{color:#087443}
+.order{background:#f6faf5}.order-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}
+.card{background:#fff;border:1px solid #e5ede6;border-radius:19px;padding:23px;box-shadow:0 10px 30px #00461c0b}
+.card h3{font-size:24px;margin-bottom:13px}
+.cart-item{display:grid;grid-template-columns:55px 1fr auto;gap:10px;align-items:center;padding:11px 0;border-bottom:1px solid #edf1ed}
+.cart-item img{width:55px;height:52px;border-radius:8px;object-fit:cover}.cart-item h4{font-size:15px}
+.qty{display:flex;align-items:center;gap:5px;margin-top:4px}.qty button{width:25px;height:25px;border:1px solid #d8e3da;background:#f7faf7;border-radius:5px;cursor:pointer}
+.remove{border:0;background:none;color:#d22;cursor:pointer;font-size:12px}
+.empty{text-align:center;color:#748078;padding:25px}
+.totals{margin-top:15px;display:grid;gap:7px}.row{display:flex;justify-content:space-between}.final{font-size:21px;color:#087443;font-weight:700;border-top:1px dashed #cbd8cd;padding-top:8px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:5px}.full{grid-column:1/-1}.field label{font-weight:600;font-size:14px}
+.field input,.field textarea,.field select{width:100%;border:1px solid #d7e2d9;border-radius:9px;padding:11px;outline:none}.field input:focus,.field textarea:focus{border-color:#087443}
+textarea{min-height:85px;resize:vertical}.submit{width:100%;margin-top:14px;background:#159b55;color:#fff}
+.delivery{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:20px}.delivery>div{background:#fff;padding:17px;border-radius:14px;box-shadow:0 7px 22px #00000008}
+footer{background:#063b25;color:#c9ddd1;padding:45px 0 18px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}footer h3{color:#fff;margin-bottom:10px}footer a{display:block;color:#b9cec1;margin:4px 0}footer p{font-size:14px}.copy{text-align:center;border-top:1px solid #ffffff20;margin-top:30px;padding-top:15px;font-size:12px;color:#9ab4a5}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,30px);opacity:0;background:#173a29;color:#fff;padding:11px 17px;border-radius:10px;transition:.25s;z-index:300}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:950px){.navlinks{display:none}.menu{display:block}.feature-grid{grid-template-columns:1fr 1fr}.products{grid-template-columns:1fr 1fr}.about-grid,.order-grid{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.container{width:94%}.nav{height:64px}.logo b{font-size:21px}.logo-icon{width:41px;height:41px}.hero{min-height:520px}.hero-content{padding:50px 0}.hero h1{font-size:42px}.hero p{font-size:16px}.feature-grid{padding:13px 0}.feature{font-size:13px}.feature small{font-size:10px}.fi{font-size:20px}.feature{border:0}.products{gap:11px}.pic{height:155px}.pb{padding:11px}.pb h3{font-size:16px}.pb p{font-size:11px;min-height:37px}.price{font-size:18px}.add{font-size:12px;padding:9px 5px}section{padding:53px 0}.head h2,.about h2{font-size:30px}.about-img{height:290px}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.delivery,.footer-grid{grid-template-columns:1fr}.actions>.btn{display:none}}
+</style>
+</head>
+<body>
+
+<div class="top">🌿 খাঁটি পণ্য • নিরাপদ প্যাকেজিং • সারা বাংলাদেশে ডেলিভারি</div>
+
+<header>
+<div class="container nav">
+<a class="logo" href="#home"><div class="logo-icon">🥭</div><div><b>FolHut <span>BD</span></b><small>Fresh Fruits • Pure Jaggery</small></div></a>
+<div class="navlinks">
+<a href="#home">হোম</a><a href="#mango">আম</a><a href="#jaggery">খেজুরের গুড়</a><a href="#about">আমাদের সম্পর্কে</a><a href="#order">অর্ডার</a>
+</div>
+<div class="actions"><button class="cart" onclick="goOrder()">🛒<span class="count" id="count">0</span></button><a class="btn green" href="#order">অর্ডার করুন</a><button class="cart menu" onclick="alert('মেনু: হোম • আম • খেজুরের গুড় • আমাদের সম্পর্কে • অর্ডার')">☰</button></div>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="container hero-content">
+<div class="eyebrow">🍃 প্রকৃতির খাঁটি উপহার</div>
+<h1>FolHut <span>BD</span><br>ফলের স্বাদ, সরাসরি আপনার ঘরে</h1>
+<p>বাছাই করা সুস্বাদু আম এবং খাঁটি খেজুরের গুড়—বিশ্বাসের সাথে অর্ডার করুন FolHut BD থেকে।</p>
+<div class="hero-buttons"><a class="btn green" href="#mango">🥭 আম দেখুন</a><a class="btn outline" href="#jaggery">🍯 গুড় দেখুন</a></div>
+</div>
+</section>
+
+<div class="features"><div class="container feature-grid">
+<div class="feature"><span class="fi">🌱</span><div><b>মানসম্মত পণ্য</b><small>যত্নে বাছাই করা</small></div></div>
+<div class="feature"><span class="fi">🚚</span><div><b>সারা দেশে ডেলিভারি</b><small>নিরাপদ প্যাকেজিং</small></div></div>
+<div class="feature"><span class="fi">🛡️</span><div><b>ক্যাশ অন ডেলিভারি</b><small>সহজ পেমেন্ট</small></div></div>
+<div class="feature"><span class="fi">💬</span><div><b>সহজ অর্ডার</b><small>WhatsApp সাপোর্ট</small></div></div>
+</div></div>
+
+<section class="mango" id="mango">
+<div class="container"><div class="head"><div class="tag">🥭 আমের মৌসুম</div><h2>তাজা ও সুস্বাদু আম</h2><p>মৌসুমের সেরা স্বাদ এখন আপনার ঘরে</p></div>
+<div class="products">
+<div class="product"><div class="pic"><span class="badge">জনপ্রিয়</span><img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=800&q=85" alt="গোপালভোগ আম"></div><div class="pb"><h3>গোপালভোগ আম</h3><p>সুগন্ধি ও মিষ্টি দেশি আম</p><div class="price">৳ ১৮০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('গোপালভোগ আম',180,this.previousElementSibling.previousElementSibling.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><span class="badge">Best Seller</span><img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?auto=format&fit=crop&w=800&q=85" alt="হিমসাগর আম"></div><div class="pb"><h3>হিমসাগর আম</h3><p>আঁশ কম, স্বাদে মিষ্টি</p><div class="price">৳ ১৬০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('হিমসাগর আম',160,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><img src="https://images.unsplash.com/photo-1591073113125-e46713c829ed?auto=format&fit=crop&w=800&q=85" alt="মৌসুমি আম"></div><div class="pb"><h3>মৌসুমি দেশি আম</h3><p>টাটকা ও বাছাই করা আম</p><div class="price">৳ ১৪০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('মৌসুমি দেশি আম',140,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><span class="badge">Premium</span><img src="https://images.unsplash.com/photo-1623048297485-cc5c1f6e4a5d?auto=format&fit=crop&w=800&q=85" alt="Premium আম প্যাক"></div><div class="pb"><h3>Premium আম প্যাক</h3><p>পরিবারের জন্য ৫ কেজি প্যাক</p><div class="price">৳ ৮৫০ <small>/ ৫ কেজি</small></div><button class="btn green add" onclick="add('Premium আম প্যাক (৫ কেজি)',850,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+</div></div>
+</section>
+
+<section class="jaggery" id="jaggery">
+<div class="container"><div class="head"><div class="tag">🍯 খেজুরের মিষ্টি স্বাদ</div><h2>খাঁটি খেজুরের গুড়</h2><p>ঐতিহ্যবাহী স্বাদ, যত্নে প্যাক করা</p></div>
+<div class="products">
+<div class="product"><div class="pic"><span class="badge">জনপ্রিয়</span><img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?auto=format&fit=crop&w=800&q=85" alt="পাটালি গুড়"></div><div class="pb"><h3>পাটালি গুড়</h3><p>নরম ও সুগন্ধি খেজুরের গুড়</p><div class="price">৳ ৩৫০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('পাটালি গুড়',350,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><img src="https://images.unsplash.com/photo-1587486913049-53fc88980cfc?auto=format&fit=crop&w=800&q=85" alt="দানা গুড়"></div><div class="pb"><h3>দানা গুড়</h3><p>মিষ্টি ও দানাদার ঐতিহ্যবাহী গুড়</p><div class="price">৳ ৩৮০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('দানা গুড়',380,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=85" alt="ঝোলা গুড়"></div><div class="pb"><h3>ঝোলা গুড়</h3><p>ঘন ও সুস্বাদু তরল গুড়</p><div class="price">৳ ৪৫০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('ঝোলা গুড়',450,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+<div class="product"><div class="pic"><span class="badge">Premium</span><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=85" alt="Chocolate Biz গুড়"></div><div class="pb"><h3>Chocolate Biz গুড়</h3><p>বিশেষ স্বাদের প্রিমিয়াম গুড়</p><div class="price">৳ ৫০০ <small>/ কেজি</small></div><button class="btn green add" onclick="add('Chocolate Biz গুড়',500,this.parentElement.parentElement.querySelector('img').src)">🛒 কার্টে যোগ করুন</button></div></div>
+</div></div>
+</section>
+
+<section class="about" id="about">
+<div class="container about-grid">
+<div class="about-img"><img src="https://images.unsplash.com/photo-1605027990121-cbae9e0642df?auto=format&fit=crop&w=1200&q=85" alt="FolHut BD"></div>
+<div><div style="color:#087443;font-weight:700">🌿 FolHut BD</div><h2>স্বাদে সততা, পণ্যে যত্ন</h2><p>FolHut BD-এর লক্ষ্য হলো ভালো মানের মৌসুমি আম ও খাঁটি খেজুরের গুড় সহজে আপনার ঘরে পৌঁছে দেওয়া। প্রতিটি অর্ডার যত্নের সঙ্গে প্যাক করার চেষ্টা করি।</p>
+<div class="checks"><div><span>✓</span> বাছাই করা মানসম্মত পণ্য</div><div><span>✓</span> নিরাপদ প্যাকেজিং</div><div><span>✓</span> সারা বাংলাদেশে ডেলিভারি</div><div><span>✓</span> অর্ডার কনফার্ম করে ডেলিভারি</div></div></div>
+</div>
+</section>
+
+<section class="order" id="order">
+<div class="container"><div class="head"><div class="tag">📦 সহজ অর্ডার</div><h2>আপনার অর্ডার সম্পন্ন করুন</h2><p>কার্টে পণ্য যোগ করুন, তথ্য দিন এবং WhatsApp-এ অর্ডার পাঠান।</p></div>
+<div class="order-grid">
+<div class="card"><h3>🛒 আপনার কার্ট</h3><div id="cartList"><div class="empty">কার্টে এখনো কোনো পণ্য নেই।</div></div>
+<div class="totals"><div class="row"><span>পণ্যের মোট</span><b id="sub">৳ ০</b></div><div class="row"><span>ডেলিভারি</span><b id="delivery">৳ ০</b></div><div class="row final"><span>সর্বমোট</span><b id="total">৳ ০</b></div></div></div>
+
+<div class="card"><h3>📝 কাস্টমার তথ্য</h3>
+<form onsubmit="sendOrder(event)">
+<div class="form-grid">
+<div class="field"><label>নাম *</label><input id="name" required placeholder="আপনার নাম"></div>
+<div class="field"><label>মোবাইল *</label><input id="phone" required inputmode="tel" placeholder="01XXXXXXXXX"></div>
+<div class="field"><label>জেলা *</label><input id="district" required placeholder="যেমন: রাজশাহী"></div>
+<div class="field"><label>উপজেলা/থানা *</label><input id="upazila" required placeholder="যেমন: পুঠিয়া"></div>
+<div class="field full"><label>সম্পূর্ণ ঠিকানা *</label><textarea id="address" required placeholder="গ্রাম/মহল্লা, রাস্তা, বাড়ি ইত্যাদি"></textarea></div>
+<div class="field full"><label>অতিরিক্ত নির্দেশনা</label><input id="note" placeholder="যেমন: বিকেলে ডেলিভারি চাই"></div>
+</div>
+<button class="btn submit" type="submit">💬 WhatsApp-এ অর্ডার পাঠান</button>
+<small style="color:#6c7b74;display:block;margin-top:7px">WhatsApp নম্বর সেট করতে নিচের JavaScript-এর নম্বরটি পরিবর্তন করুন।</small>
+</form></div>
+</div>
+<div class="delivery"><div>🚚 <b>ডেলিভারি</b><br><small>সারা বাংলাদেশে</small></div><div>💵 <b>পেমেন্ট</b><br><small>ক্যাশ অন ডেলিভারি</small></div><div>📦 <b>প্যাকেজিং</b><br><small>যত্নে প্যাক করা</small></div></div>
+</div>
+</section>
+
+<div style="text-align:center;padding:18px 16px;background:#fff;border-top:1px solid #eee;font-size:14px;">যোগাযোগ: <a href="mailto:rifat.molla.official.234@gmail.com">rifat.molla.official.234@gmail.com</a></div>
+<footer><div class="container footer-grid">
+<div><div class="logo"><div class="logo-icon">🥭</div><div><b style="color:#fff">FolHut <span>BD</span></b><small style="color:#9bb6aa">Fresh Fruits • Pure Jaggery</small></div></div><p style="margin-top:12px">প্রাকৃতিক স্বাদ, আপনার ঘরে।</p></div>
+<div><h3>Quick Links</h3><a href="#home">হোম</a><a href="#mango">আম</a><a href="#jaggery">খেজুরের গুড়</a><a href="#order">অর্ডার</a></div>
+<div><h3>পণ্য</h3><a href="#mango">গোপালভোগ আম</a><a href="#mango">হিমসাগর আম</a><a href="#jaggery">পাটালি গুড়</a><a href="#jaggery">দানা গুড়</a></div>
+<div><h3>যোগাযোগ</h3><p>📞 01XXXXXXXXX</p><p>💬 WhatsApp</p><p>📍 রাজশাহী, বাংলাদেশ</p><p>📘 Facebook: FolHut BD</p></div>
+</div><div class="container copy">© 2026 FolHut BD — All Rights Reserved.</div></footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =====================================================
+   FOLHUT BD - ORDER SETTINGS
+   নিজের WhatsApp নম্বর এখানে বসান।
+   উদাহরণ: 01712345678 হলে লিখবেন 8801712345678
+   ===================================================== */
+const WHATSAPP_NUMBER = "8801585917521";
+
+let cart = JSON.parse(localStorage.getItem("folhut_cart") || "[]");
+
+function money(n){return "৳ " + Number(n).toLocaleString("bn-BD")}
+function save(){localStorage.setItem("folhut_cart",JSON.stringify(cart))}
+function toast(t){const e=document.getElementById("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1800)}
+
+function add(name,price,image){
+  let item=cart.find(x=>x.name===name);
+  if(item)item.qty++;
+  else cart.push({name,price,image,qty:1});
+  save();render();toast(name+" কার্টে যোগ হয়েছে ✓");
+}
+function change(name,n){
+  const x=cart.find(i=>i.name===name);if(!x)return;
+  x.qty+=n;if(x.qty<=0)cart=cart.filter(i=>i.name!==name);
+  save();render();
+}
+function removeItem(name){cart=cart.filter(i=>i.name!==name);save();render()}
+function safe(s){return String(s).replace(/\\/g,"\\\\").replace(/'/g,"\\'")}
+
+function render(){
+  document.getElementById("count").textContent=cart.reduce((a,x)=>a+x.qty,0);
+  const list=document.getElementById("cartList");
+  if(!cart.length){list.innerHTML='<div class="empty">কার্টে এখনো কোনো পণ্য নেই।</div>'}
+  else{
+    list.innerHTML=cart.map(x=>`
+    <div class="cart-item">
+      <img src="${x.image}" alt="">
+      <div><h4>${x.name}</h4><small>${money(x.price)} × ${x.qty}</small>
+      <div class="qty"><button onclick="change('${safe(x.name)}',-1)">−</button><b>${x.qty}</b><button onclick="change('${safe(x.name)}',1)">+</button><button class="remove" onclick="removeItem('${safe(x.name)}')">মুছুন</button></div></div>
+      <b style="color:#087443">${money(x.price*x.qty)}</b>
+    </div>`).join("");
+  }
+  const sub=cart.reduce((a,x)=>a+x.price*x.qty,0);
+  const del=sub?100:0;
+  document.getElementById("sub").textContent=money(sub);
+  document.getElementById("delivery").textContent=money(del);
+  document.getElementById("total").textContent=money(sub+del);
+}
+function goOrder(){document.getElementById("order").scrollIntoView({behavior:"smooth"})}
+
+function sendOrder(e){
+  e.preventDefault();
+  if(!cart.length){toast("আগে কার্টে একটি পণ্য যোগ করুন!");goOrder();return}
+  if(WHATSAPP_NUMBER.includes("X")){
+    alert("index.html-এর JavaScript অংশে WHATSAPP_NUMBER-এর জায়গায় আপনার WhatsApp নম্বর বসান।");
+    return;
+  }
+  const name=document.getElementById("name").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const district=document.getElementById("district").value.trim();
+  const upazila=document.getElementById("upazila").value.trim();
+  const address=document.getElementById("address").value.trim();
+  const note=document.getElementById("note").value.trim();
+  const sub=cart.reduce((a,x)=>a+x.price*x.qty,0),del=100,total=sub+del;
+
+  let msg="FolHut BD - নতুন অর্ডার\n\n";
+  msg+="কাস্টমারের তথ্য:\n";
+  msg+="নাম: "+name+"\nমোবাইল: "+phone+"\nজেলা: "+district+"\nউপজেলা/থানা: "+upazila+"\nঠিকানা: "+address+"\n";
+  if(note)msg+="নোট: "+note+"\n";
+  msg+="\nঅর্ডারের পণ্য:\n";
+  cart.forEach((x,i)=>msg+=(i+1)+". "+x.name+" × "+x.qty+" = "+money(x.price*x.qty)+"\n");
+  msg+="\nপণ্যের মোট: "+money(sub)+"\nডেলিভারি: "+money(del)+"\nসর্বমোট: "+money(total);
+
+  window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank");
+}
+render();
+</script>
+</body>
+</html>
